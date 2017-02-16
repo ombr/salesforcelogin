@@ -8,5 +8,15 @@ $ ->
     payload =
       username : $('#username').val()
       password: $('#password').val()
-
+      env: 'login'
+    if chrome? and chrome.runtime? and chrome.runtime.sendMessage?
+      chrome.runtime.sendMessage(
+        'ijdkpfdpocgbpempblmkfppepmcbhhfa',
+        {
+          'action': 'login',
+          payload: payload
+        },
+        (result)->
+          console.log 'response !', result
+      )
   $('button', $form).removeAttr('disabled')

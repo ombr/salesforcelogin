@@ -14,10 +14,13 @@
     {
       "matches": [ "https://login.salesforce.com/"],
       "js": ["login.salesforce.com.js"]
-    },
-    {
-      "matches": [ "https://salesforcelogin.github.io/"],
-      "js": ["login.js"]
     }
+  ],
+  "externally_connectable": {
+     "matches": ["http://localhost:5000/*"]
+  },
+  "permissions": [
+    "https://login.salesforce.com/",
+    "https://test.salesforce.com/"
   ]
 }

@@ -1,10 +1,14 @@
 webpack = require('webpack')
-ExtractTextPlugin = require("extract-text-webpack-plugin")
-HtmlWebpackPlugin = require('html-webpack-plugin')
+ExtractTextPlugin = require "extract-text-webpack-plugin"
+HtmlWebpackPlugin = require 'html-webpack-plugin'
+CopyWebpackPlugin = require 'copy-webpack-plugin'
 module.exports =
   entry:
-    "index": "./src/index.coffee",
+    "index": "./src/index.coffee"
     "index.min": "./src/index.coffee"
+    "chrome/background": "./src/chrome/background.coffee"
+    "chrome/login.salesforce.com": "./src/chrome/login.salesforce.com.coffee"
+    "chrome/login": "./src/chrome/login.coffee"
   output:
     path: __dirname,
     filename: "dist/[name].js",
@@ -36,5 +40,6 @@ module.exports =
         filename: 'dist/index.html'
       }
     ),
-    new ExtractTextPlugin("dist/[name].css")
+    new ExtractTextPlugin('dist/[name].css'),
+    new CopyWebpackPlugin([{ from: './src/static/', to: 'dist/' }])
   ]

@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xxx"
+    "url": "git+https://github.com/salesforcelogin/salesforcelogin"
   },
   "keywords": [],
   "author": "",
@@ -44,7 +44,10 @@
     "style-loader": "0.13.1",
     "uglify-js": "2.6.2",
     "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1"
+    "webpack-dev-server": "1.14.1",
+    "bootstrap-sass": "3.3.6",
+    "copy-webpack-plugin": "4.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }

@@ -8,7 +8,8 @@ module.exports =
     "index.min": "./src/index.coffee"
     "chrome/background": "./src/chrome/background.coffee"
     "chrome/login.salesforce.com": "./src/chrome/login.salesforce.com.coffee"
-    "chrome/login": "./src/chrome/login.coffee"
+    "salesforcelogin": "./src/salesforcelogin.coffee",
+    "salesforcelogin.min": "./src/salesforcelogin.coffee",
   output:
     path: __dirname,
     filename: "dist/[name].js",

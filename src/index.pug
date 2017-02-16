@@ -9,6 +9,11 @@ html(lang="en")
   body
     .container
       .row
-        .col-md-12
-          h1 Hello World !!
+        .col-md-4
+          form#login-form
+            .form-group
+              input#username.form-control(type="text" placeholder="username")
+            .form-group
+              input#password.form-control(type="password" placeholder="password")
+            button.btn.btn-primary(disabled="disabled" type="submit") Login
     script(type="text/javascript") !{compilation.assets['dist/index.min.js'].source()}

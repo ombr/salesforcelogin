@@ -12,12 +12,18 @@
   },
   "content_scripts": [
     {
-      "matches": [ "https://login.salesforce.com/"],
-      "js": ["login.salesforce.com.js"]
+      "matches": [ "https://login.salesforce.com/" ],
+      "js": [
+        "login.salesforce.com.js",
+        "test.salesforce.com"
+      ]
     }
   ],
   "externally_connectable": {
-     "matches": ["http://localhost:5000/*"]
+     "matches": [
+       "http://localhost:5000/*",
+       "https://salesforcelogin.github.io/*"
+     ]
   },
   "permissions": [
     "https://login.salesforce.com/",
